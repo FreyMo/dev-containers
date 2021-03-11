@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "run node",
+            "command": "node",
+            "type": "shell",
+            "args": [
+                "index.js"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/my-app/node"
+            },
+            "problemMatcher": [
+                "$eslint-stylish"
+            ]
+        },
+        {
+            "label": "run dotnet",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/my-app/dotnet"
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "run docker",
+            "command": "${workspaceFolder}/my-app/docker/run.sh",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/my-app/docker/"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
